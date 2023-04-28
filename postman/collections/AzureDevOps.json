@@ -1,0 +1,2340 @@
+{
+	"info": {
+		"_postman_id": "41748ef1-9269-4412-b9fd-7e4cb11d2b8c",
+		"name": "AzureDevOps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "4801204-41748ef1-9269-4412-b9fd-7e4cb11d2b8c"
+	},
+	"item": [
+		{
+			"name": "GetReleases",
+			"id": "b93b0612-a1ef-4e78-942b-68d12fd417bf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vsrm.dev.azure.com/arkadin/webteam/_apis/release/releases?definitionId=33&minCreatedTime=2019-06-25 12:51:33&maxCreatedTime=2019-06-25 14:51:33",
+					"protocol": "https",
+					"host": [
+						"vsrm",
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"release",
+						"releases"
+					],
+					"query": [
+						{
+							"key": "definitionId",
+							"value": "33",
+							"description": "31 = Spoka - Vision"
+						},
+						{
+							"key": "minCreatedTime",
+							"value": "2019-06-25 12:51:33",
+							"description": "yesterday evening"
+						},
+						{
+							"key": "maxCreatedTime",
+							"value": "2019-06-25 14:51:33",
+							"description": "today morning"
+						},
+						{
+							"key": "sourceBranchFilter",
+							"value": "/develop",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "artifactVersionId",
+							"value": "23.0.0.7171",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Work Items Between Builds",
+			"id": "a86c0cca-e25d-48ae-9ff7-0b1ca8a8c0c6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/workitems?fromBuildId=6481&toBuildId=6809&$top=500&api-version=5.0-preview.2\n",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"workitems"
+					],
+					"query": [
+						{
+							"key": "fromBuildId",
+							"value": "6481"
+						},
+						{
+							"key": "toBuildId",
+							"value": "6809"
+						},
+						{
+							"key": "$top",
+							"value": "500"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0-preview.2\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRelease",
+			"id": "92ce490d-8992-48fa-b1ca-ca2f2cdf9a9b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vsrm.dev.azure.com/arkadin/webteam/_apis/release/releases/7308?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"vsrm",
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"release",
+						"releases",
+						"7308"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBuild",
+			"id": "3db99f83-66fb-4691-9e70-7e26ecb67126",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/builds/6553?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"builds",
+						"6553"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListBuilds",
+			"id": "7f0f5223-13e1-43c6-8820-00ff442714ad",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/builds/6553?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"builds",
+						"6553"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindBuildDef",
+			"id": "54cc868d-cd69-445b-a82f-65f3027651df",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/builds/6553?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"builds",
+						"6553"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBuildChanges",
+			"id": "cd15dd32-b865-4c3d-9469-4e18e0e0f816",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/builds/7171/changes?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"builds",
+						"7171",
+						"changes"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCommitChanges",
+			"id": "bbded3c3-2162-4193-a73f-51f0ed9afbfa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/commits/eb55b5df338c23ee3315bb7d3e3ed636cb9d4d9f/changes??api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"commits",
+						"eb55b5df338c23ee3315bb7d3e3ed636cb9d4d9f",
+						"changes"
+					],
+					"query": [
+						{
+							"key": "?api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "$top",
+							"value": "6",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCommit",
+			"id": "b8dd4659-230e-4d14-bc07-7f00c70a2096",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/commits/cd672ad4622e348b7af3154bc207bf1982d8f001/?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"commits",
+						"cd672ad4622e348b7af3154bc207bf1982d8f001",
+						""
+					],
+					"query": [
+						{
+							"key": "$top",
+							"type": "text",
+							"value": "6",
+							"disabled": true
+						},
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Diff",
+			"id": "f03f6d01-7c94-4507-9ddc-4acb97831a69",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/diffs/commits?baseVersionType=tag&baseVersion=23.0.0&targetVersion=23.1.0.7589&api-version=5.0&targetVersionType=tag&diffCommonCommit=true",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"diffs",
+						"commits"
+					],
+					"query": [
+						{
+							"key": "baseVersionType",
+							"value": "tag"
+						},
+						{
+							"key": "baseVersion",
+							"value": "23.0.0"
+						},
+						{
+							"key": "targetVersion",
+							"value": "23.1.0.7589"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "targetVersionType",
+							"type": "text",
+							"value": "tag"
+						},
+						{
+							"key": "diffCommonCommit",
+							"type": "text",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Build Work Items Refs From Commits",
+			"id": "b9d17530-2efb-4182-b37d-a9db03066bbe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/builds/7171/workitems?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"builds",
+						"7171",
+						"workitems"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Work Items - List",
+			"id": "8eae4537-85b3-471e-82b6-43cffe500aed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/wit/workitems?ids=13268,13377,13378&api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"wit",
+						"workitems"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "13268,13377,13378"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Work Item",
+			"id": "f338bf53-520e-4f05-9de1-54001690ffde",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/wit/workitems/13268?api-version=5.0&$expand=All",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"wit",
+						"workitems",
+						"13268"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "$expand",
+							"value": "All",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Work Item Relation Types - Get",
+			"id": "13e8cf77-ef54-4426-99ac-42debe07874a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/wit/workitems/13268?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"wit",
+						"workitems",
+						"13268"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetWiki",
+			"id": "6a58edea-280d-4fc3-9f26-9f261ba8c4ee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/wiki/wikis/webteam.wiki/pages?path=Vision %2D Spoka/Release Notes/v23&api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"wiki",
+						"wikis",
+						"webteam.wiki",
+						"pages"
+					],
+					"query": [
+						{
+							"key": "path",
+							"value": "Vision %2D Spoka/Release Notes/v23"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refs",
+			"id": "15d71ce7-e010-44e4-8a05-28f756c7deb3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/refs?api-version=5.0&filter=tags/23.1",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"refs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "filter",
+							"value": "tags/23.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commits - Get Commits",
+			"id": "0ca00527-db51-465c-921a-95f9494abb7d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"compareVersion\":\n\t{\n\t\t\"version\":\"23.1.0.7615\",\n\t\t\"versionOptions\":\"firstParent\",\n\t\t\"versionType\":\"tag\"\n\t},\n\t\"itemVersion\":\n\t{\n\t\t\t\"version\":\"23.1.0.7589\",\n\t\t\"versionOptions\":\"firstParent\",\n\t\t\"versionType\":\"tag\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/commits?api-version=5.0&searchCriteria.fromCommitId=cd672ad4622e348b7af3154bc207bf1982d8f001&searchCriteria.includeWorkItems=true&searchCriteria.toCommitId=cd672ad4622e348b7af3154bc207bf1982d8f001",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"commits"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "searchCriteria.fromCommitId",
+							"value": "cd672ad4622e348b7af3154bc207bf1982d8f001"
+						},
+						{
+							"key": "searchCriteria.includeWorkItems",
+							"value": "true"
+						},
+						{
+							"key": "searchCriteria.toCommitId",
+							"value": "cd672ad4622e348b7af3154bc207bf1982d8f001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commits - Get Commits Batch",
+			"id": "c1e9d741-ad5a-46d9-a865-37179dfc0f26",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"compareVersion\":\n\t{\n\t\t\t\"version\":\"23.1.0.7615\",\n\t\t\"versionOptions\":\"previousChange\",\n\t\t\"versionType\":\"tag\"\n\t},\n\t\"itemVersion\":\n\t{\n\t\t\t\"version\":\"23.0.0\",\n\t\t\"versionOptions\":\"previousChange\",\n\t\t\"versionType\":\"tag\"\n\t},\n\t\"includeWorkItems\":true\n}"
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/commitsbatch?api-version=5.0&searchCriteria.includeWorkItems=true",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"commitsbatch"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "searchCriteria.includeWorkItems",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutWiki",
+			"id": "0556ec4f-9d60-4c01-a83f-d839ec1f361f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"content\": \"test\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/wiki/wikis/webteam.wiki/pages?path=Vision %2D Spoka/Release Notes/Test&api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"wiki",
+						"wikis",
+						"webteam.wiki",
+						"pages"
+					],
+					"query": [
+						{
+							"key": "path",
+							"value": "Vision %2D Spoka/Release Notes/Test"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Diff",
+			"id": "39bad593-e3f3-4d32-b14d-49234039679c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/diffs/commits?baseVersionType=tag&baseVersion=23.0.0&targetVersion=23.1.0.7589&api-version=5.0&targetVersionType=tag&diffCommonCommit=true",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"diffs",
+						"commits"
+					],
+					"query": [
+						{
+							"key": "baseVersionType",
+							"value": "tag"
+						},
+						{
+							"key": "baseVersion",
+							"value": "23.0.0"
+						},
+						{
+							"key": "targetVersion",
+							"value": "23.1.0.7589"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "targetVersionType",
+							"value": "tag"
+						},
+						{
+							"key": "diffCommonCommit",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Commits Between Tags",
+			"id": "f732fc81-8411-4b34-8564-65aa27f5c3af",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"compareVersion\":\n\t{\n\t\t\t\"version\":\"23.1.0.7615\",\n\t\t\"versionOptions\":\"previousChange\",\n\t\t\"versionType\":\"tag\"\n\t},\n\t\"itemVersion\":\n\t{\n\t\t\t\"version\":\"23.0.0\",\n\t\t\"versionOptions\":\"previousChange\",\n\t\t\"versionType\":\"tag\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/commitsbatch?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"commitsbatch"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Commits Between Branches",
+			"id": "bca76531-236e-4acb-8500-8dc5f905a702",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"includeWorkItems\":\"true\",\n\t\t\"compareVersion\":\n\t{\n\t\t\t\"version\":\"master\",\n\t\t\"versionOptions\":\"firstParent\",\n\t\t\"versionType\":\"branch\"\n\t},\n\t\"itemVersion\":\n\t{\n\t\t\t\"version\":\"release/23.0.0\",\n\t\t\"versionOptions\":\"firstParent\",\n\t\t\"versionType\":\"branch\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/commitsbatch?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"commitsbatch"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Commits Between Commits",
+			"id": "fa0c1150-6b6b-422e-9f65-727338464418",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"includeWorkItems\":\"true\",\n\t\t\"compareVersion\":\n\t{\n\t\t\t\"version\":\"eb55b5df338c23ee3315bb7d3e3ed636cb9d4d9f\",\n\t\t\"versionOptions\":\"firstParent\",\n\t\t\"versionType\":\"commit\"\n\t},\n\t\"itemVersion\":\n\t{\n\t\t\t\"version\":\"e5cde7973c12f828e1fe9175942345df27160278\",\n\t\t\"versionOptions\":\"firstParent\",\n\t\t\"versionType\":\"commit\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/git/repositories/Vision/commitsbatch?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"git",
+						"repositories",
+						"Vision",
+						"commitsbatch"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "queue build",
+			"id": "c3dc530a-c782-4ca9-82a1-bd228b36e1fa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "du34sk3w6jddd5e3sa4llsu2runejxyh4ejwcdahkqxgmanbkgja",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"definition\":\n\t{\n\t\t\"id\":66\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/builds?api-version=4.1",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"builds"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "4.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query release pipeline status",
+			"id": "5fc48e63-366e-4e8d-8cb3-49e917042add",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"definition\":\n\t{\n\t\t\"id\":66\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/release/releases?44api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"release",
+						"releases"
+					],
+					"query": [
+						{
+							"key": "44api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get build changes",
+			"id": "73c287df-6c55-45d3-a808-18795ee23db3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/builds/6809/changes?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"builds",
+						"6809",
+						"changes"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Build Work Items Refs",
+			"id": "8dcdbe7b-f862-4249-bb75-3e8879b28d1e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/builds/7870/workitems?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"builds",
+						"7870",
+						"workitems"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Work Items Between Builds",
+			"id": "debe421a-46ee-4e52-b9fd-c910d8e457ee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/build/workitems?fromBuildId=6481&toBuildId=6809&$top=500&api-version=5.0-preview.2\n",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"build",
+						"workitems"
+					],
+					"query": [
+						{
+							"key": "fromBuildId",
+							"value": "6481"
+						},
+						{
+							"key": "toBuildId",
+							"value": "6809"
+						},
+						{
+							"key": "$top",
+							"value": "500"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0-preview.2\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindReleaseDef",
+			"id": "508e5b65-571d-4171-8291-e0bcf6016982",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vsrm.dev.azure.com/arkadin/webteam/_apis/release/definitions?api-version=5.0&searchText=[autotest] Vision Nightly Automatic Test Campaign&isExactNameMatch=true",
+					"protocol": "https",
+					"host": [
+						"vsrm",
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"release",
+						"definitions"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "searchText",
+							"value": "[autotest] Vision Nightly Automatic Test Campaign"
+						},
+						{
+							"key": "isExactNameMatch",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetReleases",
+			"id": "2c23ac59-59a4-46e0-8bf6-cf5a93998a9d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vsrm.dev.azure.com/arkadin/webteam/_apis/release/releases?definitionId=33&api-version=5.0&sourceBranchFilter=master",
+					"protocol": "https",
+					"host": [
+						"vsrm",
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"release",
+						"releases"
+					],
+					"query": [
+						{
+							"key": "definitionId",
+							"value": "33",
+							"description": "33 = [autotest] Vision Nightly Automatic Test Campaign"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "minCreatedTime",
+							"value": "2019-04-25 19:00:00",
+							"description": "yesterday evening",
+							"disabled": true
+						},
+						{
+							"key": "maxCreatedTime",
+							"value": "2019-04-26 09:00:00",
+							"description": "today morning",
+							"disabled": true
+						},
+						{
+							"key": "sourceBranchFilter",
+							"value": "master",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRelease",
+			"id": "b2297c3d-d4c9-4752-9b16-0fe1667dfd4d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://vsrm.dev.azure.com/arkadin/webteam/_apis/release/releases/7395?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"vsrm",
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"release",
+						"releases",
+						"7395"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QueryTestsRuns",
+			"id": "903e0df5-b3eb-4b98-a6f4-6b99480b1072",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/test/runs?api-version=5.0\n&minLastUpdatedDate=2019-04-25 20:00:00&maxLastUpdatedDate=2019-04-26 09:00:00&releaseIds=7395&releaseEnvIds=21096",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"test",
+						"runs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0\n"
+						},
+						{
+							"key": "minLastUpdatedDate",
+							"value": "2019-04-25 20:00:00",
+							"description": "yesterday evening"
+						},
+						{
+							"key": "maxLastUpdatedDate",
+							"value": "2019-04-26 09:00:00",
+							"description": "today morning"
+						},
+						{
+							"key": "releaseDefIds",
+							"value": "33",
+							"description": "[autotest] Vision Nightly Automatic Test Campaign",
+							"disabled": true
+						},
+						{
+							"key": "releaseEnvDefIds",
+							"value": "102",
+							"description": "102 = AB, 103 = SQA",
+							"disabled": true
+						},
+						{
+							"key": "releaseIds",
+							"value": "7395",
+							"description": "7402,7398,7395,7393"
+						},
+						{
+							"key": "releaseEnvIds",
+							"value": "21096",
+							"description": "21124"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTestRunResult",
+			"id": "1b6a1f30-ae7a-4946-bf25-05beae72f720",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/test/Runs/1322372/results?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"test",
+						"Runs",
+						"1322372",
+						"results"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "detailsToInclude",
+							"value": "subResults",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTestRunResultIterations",
+			"id": "e5bdc6f1-b7b7-4d4c-92f8-c879839e50cb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/test/Runs/1322372/results?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"test",
+						"Runs",
+						"1322372",
+						"results"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						},
+						{
+							"key": "detailsToInclude",
+							"value": "subResults",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTestRunStats",
+			"id": "c8bb61e7-446e-4b65-999d-5e1189d8e042",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwxpq3nyjgcdr4t6vy4zm5o75wycjvzuckoulcus3vou6fw7ao7q",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/test/Runs/1169926/Statistics?api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"test",
+						"Runs",
+						"1169926",
+						"Statistics"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query tests runs",
+			"id": "7a9d1c91-d43d-4104-a832-370e081659d3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qfxhtxq2fhknsnuomg6fgyl3ixyf7utj6hn7mxtif4p52ea5fuua",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mriviere",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/webteam/_apis/test/runs?minLastUpdatedDate=2019-06-25 12:54:42&maxLastUpdatedDate=2019-06-25 14:06:42&releaseIds=9542&releaseEnvIds=29283",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"webteam",
+						"_apis",
+						"test",
+						"runs"
+					],
+					"query": [
+						{
+							"key": "minLastUpdatedDate",
+							"value": "2019-06-25 12:54:42"
+						},
+						{
+							"key": "maxLastUpdatedDate",
+							"value": "2019-06-25 14:06:42"
+						},
+						{
+							"key": "releaseIds",
+							"value": "9542"
+						},
+						{
+							"key": "releaseEnvIds",
+							"value": "29283"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current iteration",
+			"id": "2f682227-6636-403f-b322-c0773b25599d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "m6mgm7egtat4ggh73rskft4j7qog5ptndqxnijs2cb6aklglh2jq",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/one-is/Patrice - Quote to Rate/_apis/work/teamsettings/iterations?$timeframe=Current&api-version=5.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"one-is",
+						"Patrice - Quote to Rate",
+						"_apis",
+						"work",
+						"teamsettings",
+						"iterations"
+					],
+					"query": [
+						{
+							"key": "$timeframe",
+							"value": "Current"
+						},
+						{
+							"key": "api-version",
+							"value": "5.0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "iteration work items",
+			"id": "efd6baa6-f349-4e06-b67f-13de974d5083",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "m6mgm7egtat4ggh73rskft4j7qog5ptndqxnijs2cb6aklglh2jq",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/one-is/Patrice - Quote to Rate/_apis/work/teamsettings/iterations/70ef2b3d-c114-4cfc-a5b9-018cdb11ac99/workitems?api-version=7.1-preview.1",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"one-is",
+						"Patrice - Quote to Rate",
+						"_apis",
+						"work",
+						"teamsettings",
+						"iterations",
+						"70ef2b3d-c114-4cfc-a5b9-018cdb11ac99",
+						"workitems"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "7.1-preview.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create bug work item",
+			"id": "3ee9382d-a462-4e46-945c-099a553d9abd",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "m6mgm7egtat4ggh73rskft4j7qog5ptndqxnijs2cb6aklglh2jq",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " [{\r\n    \"op\": \"add\",\r\n    \"path\": \"/fields/System.Title\",\r\n    \"from\": null,\r\n    \"value\": \"Sample from postman\"\r\n  }\r\n ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev.azure.com/arkadin/one-is/_apis/wit/workitems/$Bug?api-version=6.0",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"azure",
+						"com"
+					],
+					"path": [
+						"arkadin",
+						"one-is",
+						"_apis",
+						"wit",
+						"workitems",
+						"$Bug"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "6.0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
